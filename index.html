@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff9f8">
+  <title>Mari Make Fashion Store | Beleza divertida</title>
+  <meta name="description" content="Maquiagem, autocuidado e itens para lash com a cara da Mari Make Fashion Store. Conheça as novidades no Instagram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #2f1722;
+      --muted: #765d68;
+      --pink: #d92d78;
+      --pink-deep: #9b174f;
+      --pink-pale: #fbe8ef;
+      --cream: #fff9f8;
+      --gold: #c5903e;
+      --line: #f0dce4;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --page: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; background: #f0e8eb; color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    .mobile-page { width: min(100%, 430px); min-height: 100vh; margin: 0 auto; overflow: clip; background: var(--cream); box-shadow: 0 0 70px rgba(67,22,43,.1); }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #7a1642; outline-offset: 4px; }
+    .shell { width: min(100% - 36px, var(--page)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--pink-deep); font-size: 11px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+    .eyebrow::before { width: 22px; height: 1px; background: currentColor; content: ""; }
+    .serif { font-family: var(--serif); font-weight: 600; letter-spacing: -.035em; }
+    .announcement { background: var(--ink); color: #fff8fb; text-align: center; padding: 9px 14px; font-size: 11px; letter-spacing: .07em; }
+    .announcement span { color: #f3c5d8; }
+    .site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,249,248,.94); border-bottom: 1px solid rgba(240,220,228,.8); backdrop-filter: blur(14px); }
+    .header-inner { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; min-width: 0; }
+    .brand img { width: 47px; height: 47px; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: 0 0 0 1px var(--line); }
+    .brand-name { display: block; font-family: var(--serif); font-size: 19px; font-weight: 700; line-height: 1; letter-spacing: -.04em; }
+    .brand-name span { color: var(--pink); }
+    .brand-caption { display: block; margin-top: 5px; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    .desktop-nav { display: none; align-items: center; gap: 25px; color: #624651; font-size: 13px; font-weight: 600; }
+    .desktop-nav a { transition: color .2s ease; }
+    .desktop-nav a:hover { color: var(--pink); }
+    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 19px; border: 1px solid transparent; border-radius: 999px; font-size: 13px; font-weight: 700; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: white; background: var(--pink); box-shadow: 0 9px 22px rgba(217,45,120,.2); }
+    .button-primary:hover { background: var(--pink-deep); }
+    .button-outline { color: var(--pink-deep); border-color: #dba6bb; background: rgba(255,255,255,.76); }
+    .button svg { width: 17px; height: 17px; flex: none; }
+    .header-cta { display: none; }
+
+    .hero { padding: 28px 0 38px; overflow: hidden; }
+    .hero-grid { display: grid; gap: 27px; align-items: center; }
+    .hero-copy { position: relative; z-index: 1; padding-top: 5px; }
+    .hero h1 { max-width: 590px; margin: 15px 0 13px; font-size: clamp(43px, 12vw, 68px); line-height: .99; }
+    .hero h1 em { color: var(--pink); font-style: normal; }
+    .hero-lede { max-width: 450px; color: var(--muted); font-size: 15px; line-height: 1.7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 21px; }
+    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 21px; color: var(--muted); font-size: 12px; }
+    .hero-note svg { width: 18px; color: var(--gold); }
+    .hero-art { position: relative; width: min(100%, 490px); justify-self: center; padding: 0 7px 10px 0; }
+    .hero-art::before { position: absolute; inset: 12% -5% -3% 13%; z-index: -1; border-radius: 46% 46% 24px 24px; background: #f7dce7; content: ""; transform: rotate(4deg); }
+    .hero-photo { width: 100%; height: clamp(320px, 102vw, 520px); object-fit: cover; object-position: center 40%; border-radius: 48% 48% 20px 20px; box-shadow: 0 18px 44px rgba(91,31,57,.15); }
+    .price-note { position: absolute; right: 0; bottom: 23px; display: grid; place-content: center; width: 93px; height: 93px; border: 5px solid var(--cream); border-radius: 50%; background: var(--pink); color: white; text-align: center; box-shadow: 0 9px 24px rgba(91,31,57,.18); transform: rotate(7deg); }
+    .price-note span { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .price-note strong { font-family: var(--serif); font-size: 28px; line-height: 1.1; }
+
+    .category-strip { padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fffdfc; }
+    .category-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+    .category { min-height: 58px; display: flex; align-items: center; gap: 11px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: white; color: var(--ink); font-size: 12px; font-weight: 700; }
+    .category-icon { width: 34px; height: 34px; display: grid; place-items: center; flex: none; border-radius: 50%; color: var(--pink-deep); background: var(--pink-pale); }
+    .category-icon svg { width: 17px; height: 17px; }
+
+    .section { padding: 57px 0; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 23px; }
+    .section-heading h2 { margin: 8px 0 0; font-size: clamp(30px, 8vw, 43px); line-height: 1.04; }
+    .section-heading p { max-width: 280px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .product-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+    .product-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #fff; transition: transform .25s ease, box-shadow .25s ease; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(74,22,47,.09); }
+    .product-photo-wrap { position: relative; overflow: hidden; aspect-ratio: .88; background: var(--pink-pale); }
+    .product-photo { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .product-card:hover .product-photo { transform: scale(1.04); }
+    .product-tag { position: absolute; top: 9px; left: 9px; padding: 6px 9px; border-radius: 99px; background: rgba(255,255,255,.93); color: var(--pink-deep); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .product-info { padding: 12px; }
+    .product-info h3 { margin: 0; font-family: var(--serif); font-size: 17px; line-height: 1.15; }
+    .product-info p { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+    .product-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 11px; color: var(--pink-deep); font-size: 11px; font-weight: 700; }
+    .product-link svg { width: 14px; height: 14px; transition: transform .2s ease; }
+    .product-link:hover svg { transform: translateX(3px); }
+
+    .lash { padding: 0 0 58px; }
+    .lash-card { position: relative; min-height: 340px; overflow: hidden; border-radius: 23px; background: #431629; color: #fff; }
+    .lash-card > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; opacity: .76; }
+    .lash-card::after { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(42,10,27,.88),rgba(58,13,34,.5) 60%,rgba(58,13,34,.08)); content: ""; }
+    .lash-copy { position: relative; z-index: 1; max-width: 510px; padding: 35px 25px; }
+    .lash-copy .eyebrow { color: #ffd3e4; }
+    .lash-copy h2 { margin: 13px 0 10px; font-size: clamp(32px, 8vw, 47px); line-height: 1.02; }
+    .lash-copy p { max-width: 350px; color: rgba(255,255,255,.83); font-size: 13px; line-height: 1.65; }
+    .lash-copy .button { margin-top: 8px; color: var(--pink-deep); background: white; }
+
+    .about { padding: 56px 0; background: #f8e9ee; }
+    .about-grid { display: grid; gap: 24px; align-items: center; }
+    .about-photo { width: min(100%, 430px); height: 340px; justify-self: center; object-fit: cover; object-position: center 35%; border-radius: 48% 48% 18px 18px; }
+    .about-copy h2 { margin: 10px 0 13px; font-size: clamp(31px, 8vw, 45px); line-height: 1.04; }
+    .about-copy p { max-width: 480px; color: #684d59; font-size: 14px; line-height: 1.8; }
+    .about-signoff { margin-top: 20px; color: var(--pink-deep); font-family: var(--serif); font-size: 21px; font-style: italic; }
+
+    .social { padding: 59px 0 70px; text-align: center; }
+    .social-inner { position: relative; overflow: hidden; padding: 35px 21px; border-radius: 24px; background: var(--ink); color: white; }
+    .social-inner::before, .social-inner::after { position: absolute; width: 210px; height: 210px; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; content: ""; }
+    .social-inner::before { top: -145px; left: -65px; }
+    .social-inner::after { right: -75px; bottom: -157px; width: 280px; height: 280px; }
+    .social-inner > * { position: relative; z-index: 1; }
+    .social .eyebrow { color: #f4c5d8; }
+    .social h2 { max-width: 580px; margin: 12px auto 10px; font-size: clamp(31px, 8vw, 45px); line-height: 1.05; }
+    .social p { max-width: 470px; margin: 0 auto; color: rgba(255,255,255,.72); font-size: 13px; line-height: 1.7; }
+    .social .button { margin-top: 21px; color: white; background: var(--pink); }
+    .social .button:hover { background: #e34789; }
+    .site-footer { padding: 24px 0 calc(95px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 11px; }
+    .footer-brand { margin-bottom: 8px; color: var(--ink); font-family: var(--serif); font-size: 18px; font-weight: 700; }
+    .footer-brand span { color: var(--pink); }
+    .mobile-cta { position: fixed; bottom: 0; left: 50%; z-index: 20; width: min(100%, 430px); padding: 10px 18px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: rgba(255,249,248,.96); backdrop-filter: blur(14px); transform: translateX(-50%); }
+    .mobile-cta .button { width: min(100%, 540px); margin-inline: auto; display: flex; }
+
+    @media (min-width: 480px) {
+      .mobile-page { margin: 20px auto; min-height: calc(100vh - 40px); border-radius: 28px; }
+      .mobile-cta { bottom: 20px; border-radius: 0 0 28px 28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-page">
+  <div class="announcement">BELEZA, AUTOCUIDADO E <span>UM TOQUE DE DIVERSÃO</span></div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="Mari Make Fashion Store, início">
+        <img src="assets/logo.jpg" alt="Logo Mari Make">
+        <span><span class="brand-name">Mari <span>MAKE</span></span><span class="brand-caption">Fashion Store</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#novidades">Novidades</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#lash">Tudo para lash</a>
+        <a href="#sobre">Nossa história</a>
+      </nav>
+      <a class="button button-primary header-cta" href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r=".8" fill="currentColor"/></svg>
+        Fale com a Mari
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Mari Make Fashion Store</span>
+          <h1 class="serif">Seu momento de beleza, <em>do seu jeitinho.</em></h1>
+          <p class="hero-lede">Maquiagens cheias de personalidade, autocuidado gostoso e achadinhos para deixar a rotina mais divertida.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer">
+              Conheça a loja
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="button button-outline" href="#novidades">Ver novidades</a>
+          </div>
+          <div class="hero-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 3 2.3 5.2 5.7.5-4.3 3.8 1.3 5.6-5-2.9-5 2.9 1.3-5.6L4 8.7l5.7-.5L12 3Z"/></svg>
+            <span>Um carinho a mais em cada escolha.</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img class="hero-photo" src="assets/hero-gloss.jpg" alt="Seleção colorida de glosses e produtos de beleza Mari Make" fetchpriority="high">
+          <div class="price-note" aria-label="Gloss fofo por cinco reais"><span>Gloss fofo</span><strong>R$5</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-strip" id="categorias" aria-label="Categorias da loja">
+      <div class="shell category-list">
+        <a class="category" href="#novidades"><span class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M7 3h10l2 5-7 13L5 8l2-5Z"/><path d="M5 8h14M9 3l3 5 3-5"/></svg></span>Maquiagem</a>
+        <a class="category" href="#novidades"><span class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-8-4.6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.4-8 11-8 11Z"/><path d="m9 12 2 2 4-4"/></svg></span>Autocuidado</a>
+        <a class="category" href="#lash"><span class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 12c2.2-4 5.2-6 9-6s6.8 2 9 6c-2.2 4-5.2 6-9 6s-6.8-2-9-6Z"/><path d="M8 12c1.4-1.5 2.7-2.3 4-2.3s2.6.8 4 2.3M7 6l-1-2m5 1V2m6 4 1-2"/></svg></span>Tudo para lash</a>
+        <a class="category" href="#novidades"><span class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 8h16l-1.3 12H5.3L4 8Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3M9 13h.01M15 13h.01"/></svg></span>Achadinhos</a>
+      </div>
+    </section>
+
+    <section class="section" id="novidades">
+      <div class="shell">
+        <div class="section-heading">
+          <div><span class="eyebrow">Pequenos favoritos</span><h2 class="serif">Um pouco de brilho<br>para o seu dia.</h2></div>
+          <p>Explore alguns dos queridinhos da Mari Make. As novidades e opções disponíveis estão no Instagram.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <a href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer" aria-label="Conheça os glosses Vivai Love no Instagram">
+              <div class="product-photo-wrap"><img class="product-photo" src="assets/prod-love.jpg" alt="Glosses Vivai Love em diferentes tons" loading="lazy"><span class="product-tag">Lábios</span></div>
+              <div class="product-info"><h3>Gloss Vivai Love</h3><p>Cor, brilho e aquele toque especial.</p><span class="product-link">Ver no Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            </a>
+          </article>
+          <article class="product-card">
+            <a href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer" aria-label="Conheça os blushes Bobbi Rara no Instagram">
+              <div class="product-photo-wrap"><img class="product-photo" src="assets/prod-blush.jpg" alt="Blushes Bobbi Rara em tons rosados" loading="lazy"><span class="product-tag">Coradinho</span></div>
+              <div class="product-info"><h3>Blush Bobbi Rara</h3><p>Um toque de cor para completar o look.</p><span class="product-link">Ver no Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            </a>
+          </article>
+          <article class="product-card">
+            <a href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer" aria-label="Conheça a seleção de produtos para lash no Instagram">
+              <div class="product-photo-wrap"><img class="product-photo" src="assets/prod-lash.jpg" alt="Seleção de produtos e acessórios para lash" loading="lazy"><span class="product-tag">Lash</span></div>
+              <div class="product-info"><h3>Tudo para lash</h3><p>Achadinhos para sua rotina de beleza.</p><span class="product-link">Ver no Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            </a>
+          </article>
+          <article class="product-card">
+            <a href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer" aria-label="Conheça os glosses fofos no Instagram">
+              <div class="product-photo-wrap"><img class="product-photo" src="assets/hero-gloss.jpg" alt="Glosses fofos e coloridos" loading="lazy"><span class="product-tag">R$5</span></div>
+              <div class="product-info"><h3>Gloss fofo</h3><p>Um mimo divertido para levar na bolsa.</p><span class="product-link">Ver no Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lash" id="lash">
+      <div class="shell">
+        <div class="lash-card">
+          <img src="assets/prod-lash.jpg" alt="" loading="lazy">
+          <div class="lash-copy">
+            <span class="eyebrow">Seu olhar em destaque</span>
+            <h2 class="serif">Tudo para lash<br>em um só lugar.</h2>
+            <p>Uma seleção de itens para quem ama cuidar dos detalhes. Chame a Mari para descobrir o que está disponível.</p>
+            <a class="button" href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer">Ver novidades no Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="shell about-grid">
+        <img class="about-photo" src="assets/sobre-mari.jpg" alt="Imagem da campanha Mari Make sobre o sonho de infância de ter maquiagens" loading="lazy">
+        <div class="about-copy">
+          <span class="eyebrow">Um sonho que continua</span>
+          <h2 class="serif">Beleza também é se divertir.</h2>
+          <p>O sonho de infância era ter todas as maquiagens. O sonho de adulta continua o mesmo! A Mari Make nasceu desse amor por cores, novidades e pequenos momentos de autocuidado.</p>
+          <p>Encontre a loja no Instagram e acompanhe os achadinhos que chegam por lá.</p>
+          <div class="about-signoff">Com carinho, Mari</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="social">
+      <div class="shell">
+        <div class="social-inner">
+          <span class="eyebrow">Vamos nos conhecer?</span>
+          <h2 class="serif">Seu próximo achadinho pode estar te esperando.</h2>
+          <p>Acompanhe as novidades e fale diretamente com a Mari pelo perfil da loja.</p>
+          <a class="button" href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r=".8" fill="currentColor"/></svg>
+            @marimakefashionstore
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">Mari <span>MAKE</span> Fashion Store</div>
+    <div>Beleza divertida, escolhida com carinho.</div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="button button-primary" href="https://www.instagram.com/marimakefashionstore/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r=".8" fill="currentColor"/></svg>
+      Fale com a Mari no Instagram
+    </a>
+  </div>
+  </div>
+</body>
+</html>
